@@ -49,13 +49,21 @@ public class Main {
         //1. Connection
         Main m = new Main();
         Connection con = m.get_db_Connection();
+
+        //2. Statement
+        Database_Read dr = new Database_Read(con);
+        dr.read();
+        //3. Resultset
+
+
         try{
             con.close();
         }catch (Exception ex){
             ex.printStackTrace();
         }
-        //2. Statement
-        //3. Resultset
+
+
+
         //4. Close
 
 
